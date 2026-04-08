@@ -1,0 +1,13 @@
+# hexiOS App Platform
+# Requires "esp32 by Espressif" to be installed in Boards Manager.
+name=hexiOS (HEXY App Platform)
+version=1.0.2
+
+# Inherit ALL compile/link/upload recipes from the installed esp32 core.
+# "esp32:esp32" = package "esp32", architecture "esp32".
+# Without this line, Arduino has no idea how to compile anything.
+extends=esp32:esp32
+
+# Override ONLY the upload step — flash the app binary to ota_1 (0x310000)
+# instead of the default 0x10000 (which would overwrite hexiOS itself).
+tools.esptool_py.upload.pattern="{tools.esptool_py.path}/{tools.esptool_py.cmd}" --chip esp32s3 --port "{serial.port}" --baud {upload.speed} --before default_reset --after hard_reset write_flash --flash_mode {build.flash_mode} --flash_freq {build.flash_freq} --flash_size {build.flash_size} {upload.offset} "{build.path}/{build.project_name}.bin"

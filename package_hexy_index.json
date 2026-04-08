@@ -1,0 +1,35 @@
+{
+  "packages": [
+    {
+      "name": "hexiOS",
+      "maintainer": "hexiOS",
+      "websiteURL": "",
+      "email": "",
+      "help": {
+        "online": ""
+      },
+      "platforms": [
+        {
+          "name": "hexiOS (HEXY App Platform)",
+          "architecture": "esp32",
+          "version": "1.0.2",
+          "category": "Contributed",
+          "help": {
+            "online": ""
+          },
+          "url": "https://github.com/3xpell14rmu5/HEXY/releases/download/v1.0.2/hexy-platform-1.0.2.zip",
+          "archiveFileName": "hexy-platform-1.0.2.zip",
+          "checksum": "SHA-256:4c76a696a7b3b7bc1933aa323c9ff96cff0c207ad395439b0d21b05c97511191",
+          "size": "1826",
+          "boards": [
+            {
+              "name": "HEXY (hexiOS App)"
+            }
+          ],
+          "toolsDependencies": []
+        }
+      ],
+      "tools": []
+    }
+  ]
+}

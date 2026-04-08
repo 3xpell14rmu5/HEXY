@@ -1,7 +1,7 @@
 # hexiOS App Platform
 # Requires "esp32 by Espressif" to be installed in Boards Manager.
 name=hexiOS (HEXY App Platform)
-version=1.0.2
+version=1.0.3
 
 # Inherit ALL compile/link/upload recipes from the installed esp32 core.
 # "esp32:esp32" = package "esp32", architecture "esp32".

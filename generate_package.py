@@ -31,7 +31,7 @@ from pathlib import Path
 BOARD_NAME    = "hexiOS (HEXY App Platform)"
 MAINTAINER    = "hexiOS"
 BOARD_ID      = "hexy"
-VERSION       = "1.0.2"
+VERSION       = "1.0.3"
 ARCHITECTURE  = "esp32"
 PACKAGE_DIR   = Path(__file__).parent / "package"
 OUTPUT_DIR    = Path(__file__).parent
@@ -138,7 +138,13 @@ def main():
                         "checksum": f"SHA-256:{checksum}",
                         "size": str(size),
                         "boards": [{"name": "HEXY (hexiOS App)"}],
-                        "toolsDependencies": []
+                        "toolsDependencies": [
+                            {"packager": "esp32", "name": "esp-x32",              "version": "2511"},
+                            {"packager": "esp32", "name": "esptool_py",           "version": "5.1.0"},
+                            {"packager": "esp32", "name": "esp32s3-libs",         "version": "3.3.7"},
+                            {"packager": "esp32", "name": "mkspiffs",             "version": "0.2.3"},
+                            {"packager": "esp32", "name": "mklittlefs",           "version": "4.0.2-db0513a"},
+                        ]
                     }
                 ],
                 "tools": []
